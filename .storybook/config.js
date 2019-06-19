@@ -1,7 +1,9 @@
-import { configure, setAddon } from "@storybook/react";
+import { configure, setAddon, addDecorator } from "@storybook/react";
+import { withInfo } from "@storybook/addon-info";
 import JSXAddon from "storybook-addon-jsx";
 
 setAddon(JSXAddon);
+addDecorator(withInfo);
 
 const req = require.context("../src", true, /.stories.js$/);
 
